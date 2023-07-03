@@ -1,0 +1,7 @@
+As mentioned earlier, you use the fs module to interact with the filesystem. Notice, though, that you are importing the .promises part of the module.
+
+When the fs module was first created, the primary way to write asynchronous code in Node.js was through callbacks. As promises grew in popularity, the Node.js team worked to support them in the fs module out of the box. In Node.js version 10, they created a promises object in the fs module that uses promises, while the main fs module continues to expose functions that use callbacks. In this program, you are importing the promise version of the module.
+
+Once the module is imported, you can create an asynchronous function to read the file. Asynchronous functions begin with the async keyword. With an asynchronous function, you can resolve promises using the await keyword, instead of chaining the promise with the .then() method.
+
+Create a new function readFile() that accepts one argument, a string called filePath. Your readFile() function will use the fs module to load the file into a variable using async/await syntax.
